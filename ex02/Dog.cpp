@@ -5,12 +5,6 @@ Dog::Dog(): Animal()
 {
 	this->_type = "Dog";
 	this->_brain = new Brain();
-	if (this->_brain == NULL)
-	{
-		perror("Dog Brain allocation failed");
-		std::cerr << "Exiting the process now." << std::endl;
-		exit(1);
-	}
 	std::cout << "Dog Default Constructor called" << std::endl;
 }
 

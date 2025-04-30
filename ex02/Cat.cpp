@@ -4,12 +4,6 @@ Cat::Cat(): Animal()
 {
 	this->_type = "Cat";
 	this->_brain = new Brain();
-	if (this->_brain == NULL)
-	{
-		perror("Cat Brain allocation failed meow meow meow meow");
-		std::cerr << "Exiting the process now." << std::endl;
-		exit(1);
-	}
 	std::cout << "Cat Default Constructor called" << std::endl;
 }
 
