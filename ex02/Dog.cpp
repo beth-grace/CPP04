@@ -18,13 +18,15 @@ Dog::~Dog()
 	std::cout << "Dog Deconstructor called" << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &src)
+Dog &Dog::operator=(const Dog &copy)
 {
 	std::cout << "Dog Assignation operator called" << std::endl;
-	if (this == &src)
+	if (this == &copy)
 		return *this;
-
-	this->_type = src._type;
+	if (_brain)
+		delete _brain;
+	_brain = new Brain(*copy._brain);
+	this->_type = copy._type;
 	return *this;
 }
 

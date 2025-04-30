@@ -13,7 +13,7 @@ class Cat: public Animal
         Cat(const Cat &copy);
         ~Cat();
 
-        Cat &operator=(const Cat &src);
+        Cat &operator=(const Cat &copy);
 
         void    makeSound(void) const;
         const std::string	getIdea(size_t i)const;
