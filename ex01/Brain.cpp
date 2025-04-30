@@ -7,7 +7,7 @@ Brain::Brain()
 
 Brain::Brain(const Brain &copy)
 {
-	*this->copy;
+	*this = copy;
 	std::cout << "Brain Copy Constructor Called." << std::endl;
 }
 
