@@ -1,7 +1,7 @@
 CC = CC
 FLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = Animal
-SOURCES = AAnimal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp main.cpp\
+SOURCES = Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp main.cpp\
 
 OBJECTS = $(SOURCES:%.cpp=%.o)
 

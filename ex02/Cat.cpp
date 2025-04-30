@@ -7,7 +7,8 @@ Cat::Cat(): Animal()
 	std::cout << "Cat Default Constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat &copy): Animal(copy)
+Cat::Cat(const Cat &copy): Animal(copy),
+_brain(copy._brain)
 {
 	std::cout << "Cat Copy Constructor called" << std::endl;
 }
@@ -22,8 +23,7 @@ Cat &Cat::operator=(const Cat &copy)
 	std::cout << "Cat Assignation operator called" << std::endl;
 	if (this == &copy)
 		return *this;
-	if (_brain)
-		delete _brain;
+	delete _brain;
 	_brain = new Brain(*copy._brain);
 	this->_type = copy._type;
 	return *this;
