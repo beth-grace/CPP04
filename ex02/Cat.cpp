@@ -13,8 +13,7 @@ Cat::Cat(): Animal()
 	std::cout << "Cat Default Constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat &copy): Animal(),
-    _type(copy._type)
+Cat::Cat(const Cat &copy): Animal(copy)
 {
 	std::cout << "Cat Copy Constructor called" << std::endl;
 }
@@ -39,7 +38,7 @@ void	Cat::makeSound(void)const
 	std::cout << this->getType() << " says: **Meoww**" << std::endl;
 }
 
-void	Cat::getIdea(void)const
+std::string	Cat::getIdea(void)const
 {
 	for (int i = 0; i < 3; i++)
 		std::cout << "The idea number " << i << " of the Cat is: " << this->_brain->getIdea(i) << " at the address " << this->_brain->getIdeaAddress(i) << std::endl;

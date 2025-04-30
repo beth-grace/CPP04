@@ -15,7 +15,7 @@ class Brain
 
 		virtual ~Brain();
 
-		Brain &operator=(const Brain &src);
+		Brain &operator=(const Brain &copy);
 
 
 		const std::string getIdea(size_t i)const;

@@ -14,8 +14,7 @@ Dog::Dog(): Animal()
 	std::cout << "Dog Default Constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog &copy): Animal(),
-    _type(copy._type)
+Dog::Dog(const Dog &copy): Animal(copy)
 {
 	std::cout << "Dog Copy Constructor called" << std::endl;
 }
@@ -40,7 +39,7 @@ void	Dog::makeSound(void)const
 	std::cout << this->getType() << " says: **Woof**" << std::endl;
 }
 
-void	Dog::getIdea(void)const
+std::string	Dog::getIdea(void)const
 {
 	for (int i = 0; i < 3; i++)// change the 3 to 100 to show all ideas
 		std::cout << "\tIdea " << i << " of the Dog is: \"" << this->_brain->getIdea(i) << "\" at the address " << this->_brain->getIdeaAddress(i) << std::endl;
