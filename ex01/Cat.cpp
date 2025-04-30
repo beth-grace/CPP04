@@ -31,3 +31,14 @@ void	Cat::makeSound(void)const
 {
 	std::cout << this->getType() << " says: **Meoww**" << std::endl;
 }
+
+const std::string	Cat::getIdea(size_t i) const
+{
+	return (this->_brain->getIdea(i));
+		
+}
+
+void	Cat::setIdea(size_t i, std::string idea)
+{
+		this->_brain->setIdea(i, idea);
+}

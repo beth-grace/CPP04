@@ -32,10 +32,10 @@ void	Cat::makeSound(void)const
 	std::cout << this->getType() << " says: **Meoww**" << std::endl;
 }
 
-std::string	Cat::getIdea(void)const
+const std::string	Cat::getIdea(size_t i) const
 {
-	for (int i = 0; i < 3; i++)
-		std::cout << "The idea number " << i << " of the Cat is: " << this->_brain->getIdea(i) << " at the address " << this->_brain->getIdeaAddress(i) << std::endl;
+	return (this->_brain->getIdea(i));
+		
 }
 
 void	Cat::setIdea(size_t i, std::string idea)

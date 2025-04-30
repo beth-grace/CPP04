@@ -6,8 +6,8 @@ Brain::Brain()
 }
 
 Brain::Brain(const Brain &copy)
-	:_ideas(copy._ideas)
 {
+	*this = copy; 
 	std::cout << "Brain Copy Constructor called" << std::endl;
 }
 
@@ -16,15 +16,17 @@ Brain::~Brain()
 	std::cout << "Brain Deconstructor called" << std::endl;
 }
 
-Brain &Brain::operator=(const Brain &src)
+Brain &Brain::operator=(const Brain &copy)
 {
 	std::cout << "Brain Assignment operator called" << std::endl;
-	if (this == &src)
+	if (this == &copy)
 		return *this;
-	for (int i = 0; i < 100; i++)
 	{
-		if (src._ideas[i].length() > 0)
-			this->_ideas[i].assign(src._ideas[i]);
+		std::cout << "Brain Assignment Operator Called." << std::endl;
+		for (int i = 0; i < 100; i++)
+		{
+			_ideas[i] = copy._ideas[i];
+		}
 	}
 	return *this;
 }

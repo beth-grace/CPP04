@@ -33,10 +33,10 @@ void	Dog::makeSound(void)const
 	std::cout << this->getType() << " says: **Woof**" << std::endl;
 }
 
-std::string	Dog::getIdea(void)const
+const std::string	Dog::getIdea(size_t i)const
 {
-	for (int i = 0; i < 3; i++)// change the 3 to 100 to show all ideas
-		std::cout << "\tIdea " << i << " of the Dog is: \"" << this->_brain->getIdea(i) << "\" at the address " << this->_brain->getIdeaAddress(i) << std::endl;
+	return (this->_brain->getIdea(i));
+		
 }
 
 void	Dog::setIdea(size_t i, std::string idea)
